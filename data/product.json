@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Airpods",
+        "description": "Some Desc_1",
+        "price": 10000
+    },
+    {
+        "id": 2,
+        "name": "Pepsodent",
+        "description": "Some Desc_2",
+        "price": 20000
+    },
+    {
+        "id": 3,
+        "name": "Mie Kari",
+        "description": "Some Desc_3",
+        "price": 30000
+    },
+    {
+        "id": 4,
+        "name": "Ayam Bawang",
+        "description": "Some Desc_4",
+        "price": 40000
+    },
+    {
+        "id": 5,
+        "name": "Mie Sedap Laksa",
+        "description": "Some Desc_5",
+        "price": 50000
+    },
+    {
+        "id": "229932d4-d36f-4d91-bf6c  -dcff226c060e",
+        "tittle": "Test Products 150",
+        "description": "This is my product",
+        "price": 100
+    },
+    {
+        "id": "75e4ec86-154b-4a0e-bc14-f22e130e53b8",
+        "tittle": "Test Product",
+        "description": "This is my product",
+        "price": 100
+    },
+    {
+        "id": "10931e15-5d55-48e9-8023-75f8811ed9e0",
+        "tittle": "Test Product",
+        "description": "This is my product",
+        "price": 100
+    },
+    {
+        "id": "90be7dc3-bb8f-40a7-9851-53c8f7495feb",
+        "tittle": "Test Product",
+        "description": "This is my product",
+        "price": 100
+    },
+    {
+        "id": "515d8ec6-dbca-4dbe-a55e-491eb563d813",
+        "tittle": "Test Products 02",
+        "description": "Test",
+        "price": 2100
+    },
+    {
+        "id": "239ea1a2-8649-473e-a147-62cdb1f933f8",
+        "tittle": "Test Products 02",
+        "description": "Test",
+        "price": 2100
+    }
+]
