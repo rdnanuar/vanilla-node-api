@@ -1,9 +1,11 @@
 import {Product, findById, create, updateProducts, deleteProducts} from '../models/productModel'
 import {getPostData} from '../utils'
+
 /**
  * @route GET /api/products
  * @desc Gets ALl products
- */ 
+ */
+
 export const getProducts = async(req, res) => {
     try {
     res.writeHead(200, {
@@ -19,6 +21,7 @@ export const getProducts = async(req, res) => {
  * @route GET /api/products/:id
  * @desc Gets Single products
  */ 
+
 export const getProduct = async(req, res, id) => {
     try {
         const product = await findById(id)
@@ -106,7 +109,6 @@ export const updateProduct = async(req, res, id) => {
         console.log(error)
     }
 }
-
 
 /**
  * @route Delete /api/products/

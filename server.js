@@ -3,7 +3,11 @@ import {getProducts, getProduct, createProduct, updateProduct, deleteProduct} fr
 
 const PORT = process.env.PORT || 5000
 
+
 const server = http.createServer((req, res) => {
+    res.setHeader('Content-Type', 'application/json')
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE')
     if(req.url === "/api/products" && req.method ==="GET") {
         getProducts(req, res)
     } else if(req.url.match(/\/api\/products\/([0-9]+)/) && req.method === "GET") {
@@ -29,6 +33,8 @@ const server = http.createServer((req, res) => {
     }
 
 })
+
+
 server.listen(PORT, () => {
     console.log(`Listening on port ${PORT} ...`)
 })

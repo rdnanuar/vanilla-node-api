@@ -8,9 +8,10 @@
     "start": "nodemon --experimental-modules --es-module-specifier-resolution=node server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Rizky Djanuar",
+  "license": "MIT",
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^2.0.18",
     "uuid": "^8.3.2"
   }
