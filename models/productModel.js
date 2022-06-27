@@ -34,3 +34,12 @@ export const updateProducts = (id, prod) => {
         resolve(products[index])
     })
 }
+
+export const deleteProducts = (id) => {
+    return new Promise((resolve, reject) => {
+        const index = products.findIndex((p) => p.id === id)
+        products.splice(index, 1)
+        wirteDataToFile('./data/product.json', products);
+        resolve(products[index])
+    })
+}

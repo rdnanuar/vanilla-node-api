@@ -1,4 +1,4 @@
-import {Product, findById, create, updateProducts} from '../models/productModel'
+import {Product, findById, create, updateProducts, deleteProducts} from '../models/productModel'
 import {getPostData} from '../utils'
 /**
  * @route GET /api/products
@@ -46,6 +46,7 @@ export const getProduct = async(req, res, id) => {
  * @route POST /api/products/
  * @desc Create new data with id uuidv4
  */ 
+
 export const createProduct = async(req, res) => {
     try {
         const body = await getPostData(req)
@@ -67,6 +68,11 @@ export const createProduct = async(req, res) => {
         
     }
 }
+
+/**
+ * @route POST /api/products/
+ * @desc Update product by ID
+ */ 
 
 export const updateProduct = async(req, res, id) => {
     try {
@@ -102,3 +108,32 @@ export const updateProduct = async(req, res, id) => {
 }
 
 
+/**
+ * @route Delete /api/products/
+ * @desc Delete Product
+ */ 
+
+export const deleteProduct = async(req, res, id) => {
+    try {
+        const productId = await findById(id)
+        if(!productId) {
+            res.writeHead(404, {
+                "Content-Type": "application/json"
+            })
+            res.end(JSON.stringify({
+                message : `Data with id ${id} not found`
+            }))
+        }
+        else {
+            const delProduct = await deleteProducts(id)
+            res.writeHead(200, {
+                "Content-Type" : "application/json"
+            })
+            res.end(JSON.stringify({delProduct,
+                message : "Data deleted"
+            }))
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
