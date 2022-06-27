@@ -1,5 +1,5 @@
 import http from 'http'
-import {getProducts, getProduct, createProduct, updateProduct, deleteProduct} from './controllers/productController'
+import {getProducts, getProduct, createProduct, updateProduct, deleteProduct} from '../controllers/productController'
 
 const PORT = process.env.PORT || 5000
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node server.js"
+    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node routes/routes-product.js"
   },
   "keywords": [],
   "author": "Rizky Djanuar",
